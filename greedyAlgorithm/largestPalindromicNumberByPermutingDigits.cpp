@@ -34,11 +34,46 @@ string maxPalindrome(string num){
         return "Not Possible";
     }
 
+    vector<char> v(l);
+    int front=0;
+    for(int i=9;i>=0;i--){
+        //firstly check if it is a odd frequency element then we will place it at the middle
+        if(mp[i]%2!=0){
+            v[l/2]=char(i+48);//this is to convert i into char as 48 is the ascii of 0
+            mp[i]--;
+            
+        }
+
+        //for the other elements
+        while(mp[i]>0){
+            v[front]=char(i+48);//place the character at the most significant place
+            v[l-front-1]=char(i+48);//place the same character at the least significant place
+            //now reduce the frequency by 2 and increase front by 1
+            mp[i]-=2;
+
+            front++;
+
+
+        }
+
+        
+    }
+
+    //now make a string res from the vector obtained
+    string res="";
+    for(int i=0;i<l;i++){
+        res+=v[i];
+    }
+
+    return res;
+
 
     
 }
 
 int main(){
+    cout<<maxPalindrome("232")<<endl;
+    
     
     return 0;
 }
