@@ -7,3 +7,5 @@ graph will contain vector of edges and vector of vertices
 leetcode question 200 no. of islands
 leetcode question 417 pacific atlantic water flow
 leetcode question 994 rotting oranges
+leetcode question 543 01 matrix
+//practice more questions on bfs
