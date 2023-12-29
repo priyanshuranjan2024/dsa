@@ -15,3 +15,9 @@ leetcode question 210 course schedule 2 and leetcode question 207 course schedul
 leetcode question 947 most stones removed with same row or column\
 leetcode question 2316 count unreachable pairs of nodes in an undirected graph
 leetcode question 1559 (detect cycles in 2d grid)
+
+//minimum spanning trees
+leetcode question 1135 connecting cities with minimum cost on coding ninjas
+do all question of mst from leetcode and do premium versions from other source
+
+

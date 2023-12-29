@@ -1,0 +1,10 @@
+data structures needed-visited set,priority_queue<pair>,unordered map
+
+//process
+1.insert <-1,src> in pq;
+2.one by one remove root elements from the pq;
+3.if root elements is already visited then just continue
+4.otherwise we mark the root element as visited
+5.we store the wt of pair in the answer
+6.update the mapping
+7.go to every neighbour of the current node at only add those node that are unvisited and have a better weight proposition.

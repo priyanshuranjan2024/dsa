@@ -20,7 +20,7 @@ bool Union(vector<int>&parent,vector<int>&rank,int a,int b){
 
     if(rank[a]>=rank[b]){
         rank[a]++;
-        parent[b]=a;
+        parent[b]=a;//make parent of b as a
     }
     else{
         rank[b]++;
