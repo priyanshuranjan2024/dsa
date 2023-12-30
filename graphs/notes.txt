@@ -21,3 +21,8 @@ leetcode question 1135 connecting cities with minimum cost on coding ninjas
 do all question of mst from leetcode and do premium versions from other source
 
 
+//dijkstras
+leetcode question 1368 minimum cost to make at least one valid path in a grid
+leetcode question 785 is graph bipartite
+
+
