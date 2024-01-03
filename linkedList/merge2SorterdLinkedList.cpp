@@ -50,7 +50,7 @@ node* mergeRecursive(node* &head1,node* &head2){
     }
 
     if(head2==NULL){
-        return head2;
+        return head1;
     }
 
 

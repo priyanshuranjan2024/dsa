@@ -15,54 +15,39 @@ struct Node
     }
 };
 
-// //to calculate the diameter we will calculate the max of maxHeight and maxDiameter
-
-// int calHeight(Node* root){
-//     //base condition
-//     if(root==NULL){
-//         return 0;
-//     }
-//     return max(calHeight(root->left),calHeight(root->right))+1;
-// }
-
-// int calDiameter(Node* root){
-//     if(root==NULL){
-//         return 0;
-//     }
-
-//     int lHeight=calHeight(root->left);
-//     int rHeight=calHeight(root->right);
-
-//     int currDiameter=lHeight+rHeight+1;
-
-//     int lDiameter=calDiameter(root->left);
-//     int rDiameter=calDiameter(root->right);
-
-//     return max(currDiameter,max(lDiameter,rDiameter));
-
-// }
+// The diameter of a binary tree is defined as the length of the longest path between any two nodes
+// in a tree. This path may or may not pass through the root.
+// The length of a path is the number of edges on the path, not the number of nodes.
+// To calculate the diameter of a binary tree, you can use a recursive approach. The diameter of a binary tree is the maximum of the following three quantities:
+// Diameter of the left subtree.
+// Diameter of the right subtree.
+// Longest path between two nodes that goes through the root.
+// This can be calculated as the sum of the heights of the left and right subtrees plus 1.
 
 
-//better approach
-int calDiameter(Node* root,int* height){
+
+int calHeight(Node* root){
+    //base condition
     if(root==NULL){
-        *height=0;
-        return 0;//diameter
-
+        return 0;
     }
-    int lh=0;
-    int rh=0;
-    int lDiameter=calDiameter(root->left,&lh);
-    int rDiameter=calDiameter(root->right,&rh);
+    return max(calHeight(root->left),calHeight(root->right))+1;
+}
 
-    int currDiameter=lh+rh+1;
+int calDiameter(Node* root){
+    if(root==NULL){
+        return 0;
+    }
 
-    *height=max(lh,rh)+1;
+    int lHeight=calHeight(root->left);
+    int rHeight=calHeight(root->right);
 
-    return max(max(lDiameter,rDiameter),currDiameter);
+    int currDiameter=lHeight+rHeight+1;
 
+    int lDiameter=calDiameter(root->left);
+    int rDiameter=calDiameter(root->right);
 
-
+    return max(currDiameter,max(lDiameter,rDiameter));
 
 }
 
@@ -80,7 +65,7 @@ int main(){
 
     // cout<<calDiameter(root,)<<endl;
     int height=0;
-    cout<<calDiameter(root,&height)<<endl;
+    cout<<calDiameter(root)<<endl;
 
 
     return 0;

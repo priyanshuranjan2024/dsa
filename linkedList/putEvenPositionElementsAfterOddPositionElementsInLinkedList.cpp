@@ -1,4 +1,4 @@
-#include<C:\Users\KIIT0001\Desktop\Programming\cpp\linkedList\linkedListImpFunctions.cpp>
+#include<linkedList\linkedListImpFunctions.cpp>
 
 void evenAfterOdd(node* &head){
     node* odd=head;

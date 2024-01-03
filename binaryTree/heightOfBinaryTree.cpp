@@ -20,7 +20,7 @@ struct Node
 int calHeight(Node* root){
     //base case
     if(root==NULL){
-        return 0;
+        return -1;//if there is no tree then the height will be taken as -1 and height of single node tree is 0
     }
     int lHeight=calHeight(root->left);
     int rHeight=calHeight(root->right);
