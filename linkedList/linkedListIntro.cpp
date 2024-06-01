@@ -86,8 +86,14 @@ void toDelete(node* &head,int val){
     }
     //if linked list contain only one node
     if(head->next=NULL){
-        toDeleteAtHead(head);
-        return;
+        if(head->data==val){
+            toDeleteAtHead(head);
+            return;
+
+        }
+        else return;
+        
+        
 
     }
     //val is the the node to be deleted

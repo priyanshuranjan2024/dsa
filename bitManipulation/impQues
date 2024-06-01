@@ -1,0 +1,76 @@
+Sure, let's dive into the explanations of the common bit manipulation tricks mentioned earlier:
+
+1. **Checking if a number is even or odd:**
+   - Every even number in binary ends with a 0, and every odd number ends with a 1. Using the bitwise AND operation with 1 checks the least significant bit. If it's 1, the number is odd; otherwise, it's even.
+
+2. **Swapping two numbers without using a temporary variable:**
+   - XORing a number with itself gives 0. By XORing two numbers and then XORing the result with one of the original numbers, we can retrieve the other number.
+
+3. **Setting a particular bit (bitwise OR):**
+   - To set a bit at a specific position, we create a mask with only that bit set to 1 and use the bitwise OR operation with the original number.
+
+4. **Clearing a particular bit (bitwise AND with complement of the mask):**
+   - To clear a bit at a specific position, we create a mask with only that bit set to 0 and use the bitwise AND operation with the original number.
+
+5. **Toggling a particular bit (bitwise XOR with 1 at the position):**
+   - XORing a bit with 1 toggles its value. So, XORing the number with a mask having 1 at the specific position toggles the bit.
+
+6. **Counting the number of set bits (Brian Kernighan’s Algorithm):**
+   - In each iteration, the expression `num & (num - 1)` clears the rightmost set bit. By repeating this process until the number becomes 0, we count the set bits.
+
+7. **Finding the rightmost set bit:**
+   - The expression `num & -num` isolates the rightmost set bit in the number. The two's complement of the number flips all bits and adds 1, leaving only the rightmost set bit unchanged.
+
+8. **Checking if a number is a power of 2:**
+   - A number is a power of 2 if it has only one set bit. So, by checking if `num & (num - 1)` equals 0 (excluding zero), we ensure that the number has only one set bit.
+
+Understanding these explanations will help you utilize these tricks effectively in your coding endeavors.
+
+Certainly! Here's a list of common bit manipulation questions that are frequently asked in coding interviews:
+
+1. **Counting Set Bits:**
+   - Write a function to count the number of set bits (1s) in an integer.
+
+2. **Detecting if a number is a power of 2:**
+   - Write a function to determine if a given integer is a power of 2.
+
+3. **Swapping two numbers:**
+   - Write a function to swap two numbers without using a temporary variable.
+
+4. **Checking if a number is even or odd:**
+   - Write a function to determine if a given integer is even or odd using bit manipulation.
+
+5. **Finding the single non-repeating element in an array:**
+   - Given an array where every element appears twice except for one, find the single non-repeating element.
+
+6. **Finding the missing number in an array:**
+   - Given an array containing n distinct numbers taken from 0, 1, 2, ..., n, find the missing number.
+
+7. **Generating Gray Code sequence:**
+   - Generate the Gray Code sequence of length n. Gray Code is a binary numeral system where two successive values differ in only one bit.
+
+8. **Finding the maximum XOR pair in an array:**
+   - Given an array of integers, find the maximum XOR of any two elements.
+
+9. **Reversing bits in an integer:**
+   - Write a function to reverse the bits of an unsigned integer.
+
+10. **Detecting if two integers have opposite signs:**
+    - Write a function to determine if two integers have opposite signs without using branching.
+
+11. **Counting the number of leading/trailing zeros:**
+    - Write a function to count the number of leading or trailing zeros in an integer.
+
+12. **Finding the next power of 2:**
+    - Given an integer, find the next power of 2 greater than the given number.
+
+13. **Finding the highest set bit:**
+    - Write a function to find the position of the highest set bit (most significant bit) in an integer.
+
+14. **Checking if a number is a palindrome in binary representation:**
+    - Given an integer, determine if its binary representation is a palindrome.
+
+15. **Finding the bitwise AND of all numbers in a range:**
+    - Given two integers, find the bitwise AND of all numbers in the range between them.
+
+These are just a few examples of bit manipulation questions that commonly appear in coding interviews. Practicing these types of questions can help you become more comfortable with bit manipulation techniques and improve your problem-solving skills.
